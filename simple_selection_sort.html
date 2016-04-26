@@ -1,0 +1,29 @@
+<script>
+// https://www.youtube.com/watch?v=f8hXR_Hvybo
+var arr = [1,30,20,5,4,2,19,89,28,32,90,23];
+
+function swap(items, firstIndex, secondIndex){
+    var temp = items[firstIndex];
+    items[firstIndex] = items[secondIndex];
+    items[secondIndex] = temp;
+}
+
+function simpleSelection(items){
+
+  for(var i = 0; i<items.length; i++){
+    var min = i
+
+    for(var j=i+1; j<items.length; j++){
+      if(items[j]<items[min]){
+        min = j
+      }
+    }
+    if(i != min){
+      swap(items,i,min)
+    }
+  }
+
+  return items
+}
+console.log(simpleSelection(arr));
+</script>

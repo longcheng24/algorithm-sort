@@ -1,0 +1,24 @@
+<script>
+// https://www.nczonline.net/blog/2009/05/26/computer-science-in-javascript-bubble-sort/
+function swap(items, firstIndex, secondIndex){
+    var temp = items[firstIndex];
+    items[firstIndex] = items[secondIndex];
+    items[secondIndex] = temp;
+}
+
+function bubbleSort(items){
+
+    var len = items.length,
+        i, j, stop;
+
+    while(len--){
+      for(i=0, j=1; i<len; ++i, ++j){
+        if(items[i]>items[j]){
+          swap(items,i,j);
+        }
+      }
+    }
+    return items;
+}
+console.log(bubbleSort([1,30,20,5,4,2,19,89,28,32,90,23]));
+</script>

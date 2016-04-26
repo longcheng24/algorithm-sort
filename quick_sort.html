@@ -1,4 +1,6 @@
 <script>
+// pick a pivot
+// https://www.youtube.com/watch?v=aQiWF4E8flQ
 var items = [4, 2, 6, 5, 3, 9];
 function swap(items, firstIndex, secondIndex){
     var temp = items[firstIndex];
@@ -53,7 +55,6 @@ function quickSort(items, left, right) {
 }
 
 
-// first call
 var result = quickSort(items, 0, items.length - 1);
 console.log(result);
 </script>
